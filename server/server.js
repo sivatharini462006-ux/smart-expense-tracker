@@ -32,7 +32,7 @@ app.use('/api/budgets', budgetRoutes);
 app.use('/api/analytics', analyticsRoutes);
 app.use('/api/savings', savingsRoutes);
 app.use('/api/notifications', notificationRoutes);
-
+app.use('/api/extras', require('./routes/extrasRoutes'));
 // Centralized 404 Route Handler
 app.use((req, res, next) => {
   res.status(404).json({ success: false, message: 'Route not found' });
